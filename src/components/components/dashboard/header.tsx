@@ -117,7 +117,7 @@ export default function DashboardHeader({
             <Button
               variant="ghost"
               size="icon"
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-accent text-accent-foreground shadow-lg hover:bg-accent/90"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-accent text-accent-foreground shadow-sm hover:bg-accent/90"
             >
               <Home className="h-5 w-5 sm:h-6 sm:w-6" />
               <span className="sr-only">Home</span>
@@ -129,11 +129,12 @@ export default function DashboardHeader({
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative rounded-full h-10 w-10"
+                className="relative rounded-full h-10 w-10 bell-btn"
+                style={{ cursor: "pointer"}}
               >
                 <Bell />
                 <span className="absolute top-1 right-1 h-3 w-3 flex">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className=" absolute bg-white h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                 </span>
                 <span className="sr-only">View Notifications</span>
@@ -151,13 +152,13 @@ export default function DashboardHeader({
             <AlertDialog>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="h-10 gap-1 px-2 sm:px-3">
+                  <Button variant="ghost" className="h-10 gap-1 px-2 sm:px-3 bell-btn">
                     <User />
                     <ChevronDown className="h-4 w-4 text-muted-foreground" />
                     <span className="sr-only">Open user menu</span>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuContent align="end" className="bg-white w-48">
                   <DropdownMenuItem asChild>
                     <Link to="/dashboard/profile">
                       <UserCog className="mr-2" />

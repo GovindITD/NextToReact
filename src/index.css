@@ -161,3 +161,16 @@
 .bg-accent {
   background-color: hsl(var(--accent));
 }
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.bell-btn:hover {
+  background-color: #a4e5d5;
+  transition: all 0.2s linear;
+}
